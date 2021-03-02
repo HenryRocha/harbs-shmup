@@ -28,6 +28,12 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
         Thrust(xInput, yInput);
     }    
 
-
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemies"))
+        {
+            Destroy(collision.gameObject);
+            TakeDamage();
+        }
+    }
 }
