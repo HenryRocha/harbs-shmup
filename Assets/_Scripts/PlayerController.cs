@@ -7,6 +7,14 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     // Reference to the animator object.
     private Animator animator;
 
+    // Reference to the bullet object.
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform weapon01;
+
+    // Controls the shooting logic.
+    [SerializeField] private float shootDelay = 1.0f;
+    private float lastShotTs = 0.0f;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -19,7 +27,10 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
 
     public void Shoot()
     {
-        throw new System.NotImplementedException();
+        if (Time.time - lastShotTs > shootDelay) {
+            lastShotTs = Time.time;
+            Instantiate(bullet, weapon01.position, Quaternion.identity);
+        }
     }
 
     public void TakeDamage()
@@ -47,6 +58,11 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
         else
         {
             animator.SetFloat("Velocity", 0.0f);
+        }
+
+        if(Input.GetAxisRaw("Fire1") != 0)
+        {
+            Shoot();
         }
     }    
 
