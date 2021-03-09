@@ -15,6 +15,9 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     [SerializeField] private float shootDelay = 1.0f;
     private float lastShotTs = 0.0f;
 
+    // Number of lifes the player has.
+    [SerializeField] private int lifes = 10;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -35,7 +38,8 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
 
     public void TakeDamage()
     {
-        throw new System.NotImplementedException();
+        lifes--;
+        if (lifes <= 0) Die();
     }
 
     public void Die()

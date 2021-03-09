@@ -2,21 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VolantBehaviour : SteerableBehaviour
+public class VolantBehaviour : SteerableBehaviour, IDamageable
 {
     private float angle = 0.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     /// <summary>
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
@@ -26,5 +14,15 @@ public class VolantBehaviour : SteerableBehaviour
        angle += 0.1f;
        if (angle > 2.0f * Mathf.PI) angle = 0.0f;
        Thrust(0, Mathf.Cos(angle));
+    }
+
+    public void TakeDamage()
+    {
+        Die();
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }
