@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemyController : SteerableBehaviour, IShooter, IDamageable
 {
+    public GameObject bullet;
 
     public void Shoot()
     {
-        throw new System.NotImplementedException();
+        Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
     public void TakeDamage()
