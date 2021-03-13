@@ -32,6 +32,7 @@ public class ShotBehaviour : SteerableBehaviour
             }
         }
 
+        Debug.Log("Destroying bullet!");
         Destroy(gameObject);
     }
 }

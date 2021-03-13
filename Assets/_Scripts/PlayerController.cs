@@ -31,6 +31,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     public void Shoot()
     {
         if (Time.time - lastShotTs > shootDelay) {
+            Debug.Log("Shooting bullet!");
             lastShotTs = Time.time;
             Instantiate(bullet, weapon01.position, Quaternion.identity);
         }

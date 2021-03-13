@@ -275,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769443766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.642, y: 0, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1089724489}
@@ -366,7 +366,7 @@ Transform:
   m_Children:
   - {fileID: 769443767}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1089724490
 MonoBehaviour:
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   td: {fileID: 11400000, guid: 388701daaa55c334e9f5368eb44c325e, type: 2}
-  bullet: {fileID: 6327883464380673671, guid: a4fd10b8a6566ed4698e0958a24163c1, type: 3}
+  bullet: {fileID: 4370051340756008263, guid: a4fd10b8a6566ed4698e0958a24163c1, type: 3}
   weapon01: {fileID: 769443767}
   shootDelay: 0.25
   lifes: 10
@@ -533,7 +533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1420920055
 MonoBehaviour:
@@ -735,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 1566501250490068212, guid: c1e934940139a4b4cb9e1475b26a38c3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1566501250490068212, guid: c1e934940139a4b4cb9e1475b26a38c3,
         type: 3}
@@ -824,7 +824,7 @@ PrefabInstance:
     - target: {fileID: 5944921071508587263, guid: c564261d21a5bd04e83a7d41aa00c266,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5944921071508587263, guid: c564261d21a5bd04e83a7d41aa00c266,
         type: 3}
