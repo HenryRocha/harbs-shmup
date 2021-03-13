@@ -18,6 +18,7 @@ public class VolantBehaviour : SteerableBehaviour, IDamageable
 
     public void TakeDamage()
     {
+        Debug.Log("Purple ship taking damage!");
         Die();
     }
 

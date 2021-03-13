@@ -12,6 +12,7 @@ public class EnemyController : SteerableBehaviour, IShooter, IDamageable
 
     public void TakeDamage()
     {
+        Debug.Log("Enemy taking damage!");
         Die();
     }
 

@@ -30,7 +30,6 @@ public class ShotBehaviour : SteerableBehaviour
             {
                 damageable.TakeDamage();
             }
-
         }
 
         Destroy(gameObject);

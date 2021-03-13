@@ -12,7 +12,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     [SerializeField] private Transform weapon01;
 
     // Controls the shooting logic.
-    [SerializeField] private float shootDelay = 1.0f;
+    [SerializeField] private float shootDelay = 0.5f;
     private float lastShotTs = 0.0f;
 
     // Number of lifes the player has.
