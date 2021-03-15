@@ -16,9 +16,7 @@ public class AttackState : State
 
 
         Transition ToPatrolState = new Transition();
-        ToPatrolState.condition = new ConditionDistGT(transform,
-            GameObject.FindWithTag("Player").transform,
-            5.0f);
+        ToPatrolState.condition = new ConditionDistGT(transform, GameObject.FindWithTag("Player").transform, 5.0f);
         ToPatrolState.target = GetComponent<PatrolState>();
         // Adicionamos a transição em nossa lista de transições
         transitions.Add(ToPatrolState);

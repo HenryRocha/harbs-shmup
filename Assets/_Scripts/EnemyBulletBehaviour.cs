@@ -25,7 +25,8 @@ public class EnemyBulletBehaviour : SteerableBehaviour
     {
         Vector3 posPlayer = GameObject.FindWithTag("Player").transform.position;
         direction = (posPlayer - transform.position).normalized;
-        Debug.Log(direction);
+        float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
     }
 
     void Update()
