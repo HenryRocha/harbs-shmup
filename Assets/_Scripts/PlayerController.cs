@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : SteerableBehaviour, IShooter, IDamageable
 {
@@ -52,7 +53,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
 
     public void Die()
     {
-        Destroy(gameObject);
+        SceneManager.LoadScene("YouLoseMenu");
     }
 
     /// <summary>
