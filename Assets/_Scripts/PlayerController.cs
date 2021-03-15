@@ -16,7 +16,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     private float lastShotTs = 0.0f;
 
     // Number of lifes the player has.
-    [SerializeField] private int lifes = 10;
+    public int lifes = 10;
 
     private bool backwards = false;
 
