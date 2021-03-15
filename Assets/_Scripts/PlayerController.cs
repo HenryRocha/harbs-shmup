@@ -21,6 +21,8 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
 
     private bool backwards = false;
 
+    private AudioSource audioSource;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -29,6 +31,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     {
         // Get the reference.
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Shoot()
@@ -42,6 +45,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
             } else {
                 newBullet.GetComponent<ShotBehaviour>().ChangeDir(1);
             }
+            audioSource.Play();
         }
     }
 
