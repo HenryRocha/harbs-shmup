@@ -18,6 +18,8 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     // Number of lifes the player has.
     [SerializeField] private int lifes = 10;
 
+    private bool backwards = false;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -26,7 +28,6 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     {
         // Get the reference.
         animator = GetComponent<Animator>();
-        Debug.Log($"Player starting pos: {transform.position}");
     }
 
     public void Shoot()
@@ -34,7 +35,12 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
         if (Time.time - lastShotTs > shootDelay) {
             Debug.Log("Shooting bullet!");
             lastShotTs = Time.time;
-            Instantiate(bullet, weapon01.position, Quaternion.identity);
+            GameObject newBullet = Instantiate(bullet, weapon01.position, Quaternion.identity);
+            if (backwards) {
+                newBullet.GetComponent<ShotBehaviour>().ChangeDir(-1);
+            } else {
+                newBullet.GetComponent<ShotBehaviour>().ChangeDir(1);
+            }
         }
     }
 
@@ -56,8 +62,18 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     {
         float yInput = Input.GetAxis("Vertical");
         float xInput = Input.GetAxis("Horizontal");
+
+        if (xInput < 0 && !backwards) {
+            backwards = true;
+            animator.transform.Rotate(0, 180, 0);
+        }
+
+        if (xInput > 0 && backwards) {
+            backwards = false;
+            animator.transform.Rotate(0, 180, 0);
+        }
+
         Thrust(xInput, yInput);
-        Debug.Log($"Player current pos: {transform.position}");
         if (yInput != 0 || xInput != 0)
         {
             animator.SetFloat("Velocity", 1.0f);

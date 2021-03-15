@@ -933,7 +933,7 @@ MonoBehaviour:
   - {fileID: 1566501250026682666}
   - {fileID: 1566501249587063983}
   m_Bounds:
-    m_Center: {x: -0.0063257813, y: 0.0001014173, z: 0}
+    m_Center: {x: -0.006325662, y: 0.0001014173, z: 0}
     m_Extent: {x: 0.61234844, y: 0.38930777, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1014,7 +1014,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0063257813, y: 0.0001014173}
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566501250490068219}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1e9cf07ab86122408e78e2bb2d7d068, type: 3}
   m_Name: 
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566501250490068219}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4947413092f186943b4aa8fd02c275cf, type: 3}
   m_Name: 
@@ -1084,6 +1084,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
+  shootDelay: 0.4
 --- !u!1 &1566501250560215136
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class EnemyBulletBehaviour : SteerableBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Enemies"))
+        if (!collision.CompareTag("Enemies") && !collision.CompareTag("Bullet"))
         {
 
             IDamageable damageable = collision.gameObject.GetComponent(typeof(IDamageable)) as IDamageable;

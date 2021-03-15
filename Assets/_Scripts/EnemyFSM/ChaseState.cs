@@ -6,17 +6,26 @@ public class ChaseState : State
 {
     public Transform[] waypoints;
     SteerableBehaviour steerable;
+    IShooter shooter;
+    public float shootDelay = 1.0f;
+    private float _lastShootTimestamp = 0.0f;
 
     public override void Awake()
     {
         base.Awake();
 
-        // Transition ToAttackState = new Transition();
-        // ToAttackState.condition = new ConditionDistLT(transform, GameObject.FindWithTag("Player").transform, 5.0f);
-        // ToAttackState.target = GetComponent<AttackState>();
-        // transitions.Add(ToAttackState);
+        Transition ToPatrolState = new Transition();
+        ToPatrolState.condition = new ConditionDistGT(transform, GameObject.FindWithTag("Player").transform, 7.0f);
+        ToPatrolState.target = GetComponent<PatrolState>();
+        transitions.Add(ToPatrolState);
 
         steerable = GetComponent<SteerableBehaviour>();
+
+        shooter = steerable as IShooter;
+        if (shooter == null)
+        {
+            throw new MissingComponentException("Este GameObject não implementa IShooter");
+        }
     }
 
     public void Start()
@@ -27,6 +36,12 @@ public class ChaseState : State
 
     public override void Update()
     {
+        if (Time.time - _lastShootTimestamp > shootDelay)
+        {
+            _lastShootTimestamp = Time.time;
+            shooter.Shoot();
+        }
+
         if (Vector3.Distance(transform.position, waypoints[1].position) > 2.0f)
         {
             Vector3 direction = waypoints[1].position - transform.position;
