@@ -46,12 +46,14 @@ public class ChaseState : State
         {
             Vector3 direction = waypoints[1].position - transform.position;
             direction.Normalize();
-            Debug.Log($"Chasing! {direction.x} {direction.y}");
+
+            float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+
             steerable.Thrust(direction.x, direction.y);
         }
         else
         {
-            Debug.Log("Updating position");
             waypoints[1].position = GameObject.FindWithTag("Player").transform.position;
         }
     }
