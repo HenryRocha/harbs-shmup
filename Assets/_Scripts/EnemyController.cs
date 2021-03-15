@@ -24,14 +24,13 @@ public class EnemyController : SteerableBehaviour, IShooter, IDamageable
 
     float angle = 0;
 
-    private void FixedUpdate()
-    {
-        angle += 0.1f;
-        Mathf.Clamp(angle, 0.0f, 2.0f * Mathf.PI);
-        float x = Mathf.Sin(angle);
-        float y = Mathf.Cos(angle);
+    // private void FixedUpdate()
+    // {
+    //     angle += 0.1f;
+    //     Mathf.Clamp(angle, 0.0f, 2.0f * Mathf.PI);
+    //     float x = Mathf.Sin(angle);
+    //     float y = Mathf.Cos(angle);
 
-        Thrust(x, y);
-       
-    }
+    //     Thrust(x, y);
+    // }
 }

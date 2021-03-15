@@ -26,6 +26,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
     {
         // Get the reference.
         animator = GetComponent<Animator>();
+        Debug.Log($"Player starting pos: {transform.position}");
     }
 
     public void Shoot()
@@ -56,6 +57,7 @@ public class PlayerController : SteerableBehaviour, IShooter, IDamageable
         float yInput = Input.GetAxis("Vertical");
         float xInput = Input.GetAxis("Horizontal");
         Thrust(xInput, yInput);
+        Debug.Log($"Player current pos: {transform.position}");
         if (yInput != 0 || xInput != 0)
         {
             animator.SetFloat("Velocity", 1.0f);

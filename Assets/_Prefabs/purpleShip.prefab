@@ -826,7 +826,10 @@ GameObject:
   - component: {fileID: 1566501250490068216}
   - component: {fileID: 1566501250490068211}
   - component: {fileID: 1566501250490068210}
-  - component: {fileID: 1566501250490068213}
+  - component: {fileID: -8086076308864464272}
+  - component: {fileID: -6869293111302493587}
+  - component: {fileID: -8968542403723264559}
+  - component: {fileID: 7146866446011103734}
   m_Layer: 0
   m_Name: purpleShip
   m_TagString: Enemies
@@ -988,14 +991,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566501250490068219}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1027,7 +1030,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2246969, y: 0.77861553}
   m_EdgeRadius: 0
---- !u!114 &1566501250490068213
+--- !u!114 &-8086076308864464272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1036,10 +1039,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 1566501250490068219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef7891c8cea59654fbbeaca707c99635, type: 3}
+  m_Script: {fileID: 11500000, guid: 462343d7dc28c934e848f8bf6bdf64b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   td: {fileID: 11400000, guid: 425a82ec2d3c40f478c4af0546455da5, type: 2}
+  bullet: {fileID: 4370051340756008263, guid: 03f1578bb67ac8543a9c172bd6133a47, type: 3}
+--- !u!114 &-6869293111302493587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566501250490068219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e9cf07ab86122408e78e2bb2d7d068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8968542403723264559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566501250490068219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb035f9583f57f45b3b56003809a2dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootDelay: 1
+--- !u!114 &7146866446011103734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566501250490068219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4947413092f186943b4aa8fd02c275cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1566501250560215136
 GameObject:
   m_ObjectHideFlags: 0
