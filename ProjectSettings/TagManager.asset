@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - Asteroid
+  - BgMusic
   layers:
   - Default
   - TransparentFX

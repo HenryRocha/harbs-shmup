@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 1264770715}
   m_Layer: 0
   m_Name: BackgroundMusic
-  m_TagString: Untagged
+  m_TagString: BgMusic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f64748ac1f13944bf33d07e90abe5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagName: BgMusic
 --- !u!1 &1525187371
 GameObject:
   m_ObjectHideFlags: 0
