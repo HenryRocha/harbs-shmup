@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YouWinMenu.unity
     guid: 98e2e96388d33d94e9a8c77125fc4b2b
+  - enabled: 1
+    path: Assets/Scenes/TimeTrial.unity
+    guid: 8f21c81b8ea505c45887a1be321419ea
   m_configObjects: {}

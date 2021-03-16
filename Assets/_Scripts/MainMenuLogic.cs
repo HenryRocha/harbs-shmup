@@ -9,4 +9,9 @@ public class MainMenuLogic : MonoBehaviour
     {
         SceneManager.LoadScene("SimpleScene");
     }
+
+    public void StartTimeTrial()
+    {
+        SceneManager.LoadScene("TimeTrial");
+    }
 }

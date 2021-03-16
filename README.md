@@ -12,7 +12,7 @@
     - [X] Tela de Pause (50)
 - [X] Animações de Ambiente (100)
 - Time Trial
-    - [ ] Contador de tempo: padrão (50)
+    - [X] Contador de tempo: padrão (50)
     - [ ] Contador de tempo: corrida contra o tempo (50)
 - Troca de Nível
     - [ ] Inimigos super resistentes (50)
@@ -22,7 +22,7 @@
     - [X] Música de Background 2 (50)
     - [X] Efeitos sonoros (100)
 
-Total de pontos: 850
+Total de pontos: 900
 
 ## Recursos
 
