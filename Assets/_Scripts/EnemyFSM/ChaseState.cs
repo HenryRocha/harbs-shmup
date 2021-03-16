@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChaseState : State
 {
-    public Transform[] waypoints;
+    public Transform waypoint;
     SteerableBehaviour steerable;
     IShooter shooter;
     public float shootDelay = 1.0f;
@@ -30,8 +30,7 @@ public class ChaseState : State
 
     public void Start()
     {
-        waypoints[0].position = transform.position;
-        waypoints[1].position = GameObject.FindWithTag("Player").transform.position;
+        waypoint.position = GameObject.FindWithTag("Player").transform.position;
     }
 
     public override void Update()
@@ -42,9 +41,9 @@ public class ChaseState : State
             shooter.Shoot();
         }
 
-        if (Vector3.Distance(transform.position, waypoints[1].position) > 2.0f)
+        if (Vector3.Distance(transform.position, waypoint.position) > 2.0f)
         {
-            Vector3 direction = waypoints[1].position - transform.position;
+            Vector3 direction = waypoint.position - transform.position;
             direction.Normalize();
 
             float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -54,7 +53,7 @@ public class ChaseState : State
         }
         else
         {
-            waypoints[1].position = GameObject.FindWithTag("Player").transform.position;
+            waypoint.position = GameObject.FindWithTag("Player").transform.position;
         }
     }
 }
