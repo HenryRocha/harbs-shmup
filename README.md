@@ -7,7 +7,9 @@
 - [x] Gameloop
 - Telas do Usuário
     - [x] Telas de início e fim (50)
-    - [ ] Placa e Vidas (50)
+    - [X] Placar e Vidas (50)
+    - [ ] Pontos na tela do jogo (50)
+    - [ ] Tela de Pause (50)
 - [X] Animações de Ambiente (100)
 - Time Trial
     - [ ] Contador de tempo: padrão (50)
