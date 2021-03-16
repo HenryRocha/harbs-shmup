@@ -19,7 +19,7 @@
     - [X] Música de Background 2 (50)
     - [X] Efeitos sonoros (100)
 
-Total de pontos: 950
+Total de pontos: 1000
 
 ## Recursos
 
