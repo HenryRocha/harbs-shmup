@@ -8,7 +8,7 @@
 - Telas do Usuário
     - [x] Telas de início e fim (50)
     - [X] Placar e Vidas (50)
-    - [ ] Pontos na tela do jogo (50)
+    - [X] Pontos na tela do jogo (50)
     - [X] Tela de Pause (50)
 - [X] Animações de Ambiente (100)
 - Time Trial
@@ -28,3 +28,4 @@ Total de pontos: 950
 - [Ships and bullets sprites](https://free-game-assets.itch.io/free-enemy-spaceship-2d-sprites-pixel-art)
 - [Bullet sound](https://www.myinstants.com/instant/pew/)
 - [Background music](https://www.fesliyanstudios.com/royalty-free-music/download/escape-chase/340)
+- [Floating points logic](https://www.youtube.com/watch?v=esnaEYYD1ZM)

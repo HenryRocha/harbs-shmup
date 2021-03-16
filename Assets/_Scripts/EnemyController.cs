@@ -11,6 +11,8 @@ public class EnemyController : SteerableBehaviour, IShooter, IDamageable
     // Reference to the PointsUI class.
     [SerializeField] private PointsUI pointsUI;
 
+    [SerializeField] private GameObject floatingPoints;
+
     public void Shoot()
     {
         Instantiate(bullet, transform.position, Quaternion.identity);
@@ -26,6 +28,8 @@ public class EnemyController : SteerableBehaviour, IShooter, IDamageable
     public void Die()
     {
         pointsUI.UpdatePoints(+100);
+        GameObject points =  Instantiate(floatingPoints, transform.position, Quaternion.identity) as GameObject;
+        points.transform.GetChild(0).GetComponent<TextMesh>().text = "+100";
         Destroy(gameObject);
     }
 }

@@ -2286,7 +2286,7 @@ MonoBehaviour:
   bullet: {fileID: 4370051340756008263, guid: a4fd10b8a6566ed4698e0958a24163c1, type: 3}
   weapon01: {fileID: 769443767}
   shootDelay: 0.35
-  lifes: 10
+  lifes: 1000
 --- !u!61 &1089724491
 BoxCollider2D:
   m_ObjectHideFlags: 0
