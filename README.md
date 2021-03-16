@@ -13,16 +13,13 @@
 - [X] Animações de Ambiente (100)
 - Time Trial
     - [X] Contador de tempo: padrão (50)
-    - [ ] Contador de tempo: corrida contra o tempo (50)
-- Troca de Nível
-    - [ ] Inimigos super resistentes (50)
-    - [ ] Bônus por passar de nível (50)
+    - [X] Contador de tempo: corrida contra o tempo (50)
 - Audio
     - [X] Música de Background (50)
     - [X] Música de Background 2 (50)
     - [X] Efeitos sonoros (100)
 
-Total de pontos: 900
+Total de pontos: 950
 
 ## Recursos
 
